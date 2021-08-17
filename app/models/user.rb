@@ -5,7 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :email_address, format: { with: /\A[^@\s]+@[^@\s]+\z/ }
-  validates :first_name, :last_name, :address, :email_address, presence: true
-  validates :email_address, uniqueness: true
+  #validates :email, format: { with: /\A[^@\s]+@[^@\s]+\z/ }
+  #validates :first_name, :last_name, :address, :email, presence: true
+  #validates :email, uniqueness: true
 end
