@@ -27,6 +27,7 @@ puts "creating stars"
               last_name: Faker::Name.last_name,
               address: Faker::Address.street_address,
               email_address: Faker::Internet.email,
-              user: User.all.sample)
+              user: User.all.sample,
+              category: %w[dancer singer showman].sample)
 end
 puts "#{Star.count} users created"
