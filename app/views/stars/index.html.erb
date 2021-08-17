@@ -1,3 +1,6 @@
+<h1>Nos presques stars !</h1>
 <% @stars.each do |star| %>
-<%= star %>
+<ul>
+<li><%= link_to "#{star.performer_name}", "/stars/#{star.id}" %></li>
+</ul>
 <% end %>
