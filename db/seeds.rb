@@ -17,7 +17,6 @@ puts "creating users"
 end
 puts "#{User.count} users created"
 
-
 puts "destroying stars"
 Star.destroy_all
 puts "creating stars"
