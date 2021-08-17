@@ -1,8 +1,0 @@
-<%= simple_form_for(star) do |f| %>
-  <!-- [...] -->
-  <%= f.input :photo, as: :file %>
-  <!-- [...] -->
-<% end %>
-
-
-<%= cl_image_tag @star.photo.key, height: 300, width: 400, crop: :fill %>
