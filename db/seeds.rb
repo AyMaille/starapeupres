@@ -24,7 +24,7 @@ puts "#{User.count} users created"
 
 puts "creating stars"
 10.times do
-  Star.create(performer_name: Faker::FunnyName.name,
+  star = Star.create(performer_name: Faker::FunnyName.name,
               first_name: Faker::Name.first_name,
               last_name: Faker::Name.last_name,
               address: Faker::Address.street_address,
