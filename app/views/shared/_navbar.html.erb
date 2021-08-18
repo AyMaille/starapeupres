@@ -11,7 +11,11 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Hello ", "#", class: "nav-link" %>
+
+          <%= link_to "Hello les Stars ", "/", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Nos quasi stars", "stars", class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to " Tous nos artistes ", "#", class: "nav-link" %>

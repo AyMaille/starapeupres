@@ -1,0 +1,11 @@
+<%= simple_form_for(@star) do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :address %>
+  <%= f.input :email_address %>
+  <%= f.input :performer_name %>
+  <%= f.input :category %>
+  <%= f.input :decription %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>

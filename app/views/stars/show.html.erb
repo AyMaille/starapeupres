@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="header mt-3 mb-5">
+    <h1><%= "#{@star.performer_name}" %></h1>
+  </div>
+  <div class="d-flex">
+    <div><% if @star.photo.present? %>
+      <%= cl_image_tag(@star.photo.key, :width => 400, :height => 500,
+                      :crop => :thumb, :gravity => :face) %>
+      <% end %>
+    </div>
+    <div class="display-4 pl-4">
+      <p><%= "#{@star.category}" %></p>
+
+      <p><%= "#{@star.decription}" %></p>
+    </div>
+  </div>
+</div>
+
+<ul class="list-group">
+  <% @star.missions.each do |mission| %>
+    <li class="list-group-item"><%= link_to mission.special_request, mission_path(mission) %></li>
+  <% end %>
+</ul>
+
+<h3>Réserver</h3>
+<%= simple_form_for [@star, @user, @mission] do |f| %>
+  <%= f.input :price, placeholder: 'Price' %>
+  <%= f.input :special_request, placeholder: 'Special request' %>
+  <%= f.submit class: 'btn btn-flat' %>
+<% end %>
