@@ -5,6 +5,7 @@ class StarsController < ApplicationController
 
   def show
     @star = Star.find(params[:id])
+    @mission = Mission.new(star: @star)
   end
 
   def new

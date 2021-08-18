@@ -15,3 +15,16 @@
     </div>
   </div>
 </div>
+
+<ul class="list-group">
+  <% @star.missions.each do |mission| %>
+    <li class="list-group-item"><%= link_to mission.special_request, mission_path(mission) %></li>
+  <% end %>
+</ul>
+
+<h3>Réserver</h3>
+<%= simple_form_for [@star, @user, @mission] do |f| %>
+  <%= f.input :price, placeholder: 'Price' %>
+  <%= f.input :special_request, placeholder: 'Special request' %>
+  <%= f.submit class: 'btn btn-flat' %>
+<% end %>

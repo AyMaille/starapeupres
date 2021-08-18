@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #   resources :stars
   #   resources :missions
   # end
-  resources :missions, only: [:index, :show, :update, :destroy]
+  resources :missions, only: [:index, :show, :edit, :update, :destroy]
   namespace :contracts do
     resources :missions, only: [:index]
   end

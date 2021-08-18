@@ -14,9 +14,9 @@ class MissionsController < ApplicationController
   def create
     @mission = Mission.new(mission_params)
     @star = Star.find(params[:star_id])
-    @user = Star.find(params[:user_id])
+    @user = current_user.id
     @mission.star = @star
-    @mission.user = @user
+    @mission.user_id = @user
     if @mission.save
       redirect_to star_path(@star)
     else
@@ -24,10 +24,20 @@ class MissionsController < ApplicationController
     end
   end
 
+  def edit
+    @mission = Mission.find(params[:id])
+  end
+
+  def update
+    @mission = Mission.find(params[:id])
+    @mission.update(mission_params)
+    redirect_to star_path(@mission.star)
+  end
+
   def destroy
     @mission = Mission.find(params[:id])
     @mission.destroy
-    redirect_to stars_path
+    redirect_to star_path(@mission.star)
   end
 
   private
