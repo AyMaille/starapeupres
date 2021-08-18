@@ -1,4 +1,5 @@
 <h1>Nos presques stars !</h1>
+<div class="cards">
 <% @stars.each do |star| %>
   <ul>
     <li><%= link_to "#{star.performer_name}", "/stars/#{star.id}" %>
@@ -13,3 +14,4 @@
     </li>
   </ul>
 <% end %>
+</div>
