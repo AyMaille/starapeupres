@@ -21,7 +21,6 @@ puts "creating users"
 end
 puts "#{User.count} users created"
 
-
 # puts "creating stars"
 # 10.times do
 #   star = Star.create(performer_name: Faker::FunnyName.name,

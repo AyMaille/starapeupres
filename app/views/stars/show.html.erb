@@ -16,15 +16,11 @@
   </div>
 </div>
 
-<ul class="list-group">
-  <% @star.missions.each do |mission| %>
-    <li class="list-group-item"><%= link_to mission.special_request, mission_path(mission) %></li>
-  <% end %>
-</ul>
-
-<h3>Réserver</h3>
+<h3>Book</h3>
 <%= simple_form_for [@star, @user, @mission] do |f| %>
-  <%= f.input :price, placeholder: 'Price' %>
+  <%= f.input :booking, placeholder: 'Date' , label: "Date" %>
+  <%= f.input :name, placeholder: 'Event Name' , label: "Event Name" %>
+  <%= f.input :address, placeholder: 'Address' , label: "Address" %>
   <%= f.input :special_request, placeholder: 'Special request' %>
-  <%= f.submit class: 'btn btn-flat' %>
+  <%= f.submit "Book Now!", class: 'btn btn-flat' %>
 <% end %>

@@ -7,18 +7,18 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Hello les Stars ", "/", class: "nav-link" %>
+          <%= link_to "Homepage", root_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Nos quasi stars", "stars", class: "nav-link" %>
+        <li class="nav-item active">
+          <%= link_to "Nos stars", stars_path, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+        <li class="nav-item active">
+          <%= link_to "Mes réservations ", missions_path, class: "nav-link" %>
+        <li class="nav-item active">
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
