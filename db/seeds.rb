@@ -34,5 +34,7 @@ puts "creating stars"
               decription: Faker::GreekPhilosophers.quote)
               # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
               # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
+  star.photo.attach(io: File.open('app/assets/images/photos_sample/cloco.png'), filename: 'cloco.png')
+
 end
 puts "#{Star.count} stars created"
