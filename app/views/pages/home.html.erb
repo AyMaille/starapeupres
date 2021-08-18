@@ -1,2 +1,27 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-home">
+    <div class="container">
+      <h1></strong> Devenez ou choisissez un sosie pour vos évènements !</strong></h1>
+      <p> Vous souhaitez partager votre talent de sosie ou tout simplement louer une prestation pour un évènement particulier,
+      venez découvrir nos meilleurs sosies !</p>
+      <a class="btn btn-flat" href="#"> Voir les Stars </a>
+    </div>
+    <div class="cards">
+      <div class="card ">
+      <%= image_tag "Birthday.jpeg",class: 'img_activites' %>
+        <div class="card__description"></div>
+        <div class="card__descriptionText">Anniversaires </div>
+      </div>
+
+      <div class="card">
+      <%= image_tag "mariage.jpeg", class: 'img_activites' %>
+        <div class="card__description"></div>
+        <div class="card__descriptionText">Mariages</div>
+      </div>
+
+      <div class="card">
+      <%= image_tag "party.jpeg", class: 'img_activites' %>
+        <div class="card__description"></div>
+        <div class="card__descriptionText">Soirées </div>
+      </div>
+    </div>
+</div>

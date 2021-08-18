@@ -1,1 +1,33 @@
-// Specific CSS for your home-page
+
+.banner-home {
+  background-size: cover;
+  background-position: center;
+  background-image: image-url("Hollywood.jpeg");
+  height: 270px;
+  margin-top: 5px;
+  justify-content: center;
+  text-shadow: black 0.2px 0.1px;
+
+}
+.btn{
+  color:white;
+  background-color: #940606;
+}
+
+.container {
+  color: white;
+  text-align: center;
+  padding: 75px;
+  font-family: "Akrobat", sans-serif;
+}
+.cards {
+  display: flex;
+  justify-content: space-around;
+  color: #940606;
+  text-align: center;
+  padding: 0px;
+}
+.card {
+  border: 1px solid #AA8B2F;
+  border-radius: 2px;
+}
