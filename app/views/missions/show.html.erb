@@ -1,8 +1,14 @@
-<h1><%= @mission.special_request %></h1>
-<p><%= @mission.price %></p>
+<h1><%= @mission.name %></h1>
+<ul class="list-group">
+  <li><p><%= @mission.price %></p></li>
+  <li><p><%= @mission.booking %></p></li>
+  <li><p><%= @mission.address %></p></li>
+  <li><p><%= @mission.special_request %></p></li>
+
+</ul>
 <%= link_to 'Back', star_path(@mission.star) %> |
 <%= link_to 'Edit', edit_mission_path %> |
-<li><%= link_to "Delete #{@mission.special_request}",
+<li><%= link_to "Delete #{@mission.name}",
             mission_path(@mission),
             method: :delete,
             data: { confirm: "Are you sure?" } %></li>
