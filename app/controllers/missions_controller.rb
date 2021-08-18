@@ -1,7 +1,7 @@
 class MissionsController < ApplicationController
 
   def index
-    @missions = Mission.all
+    @missions = Mission.where(user: current_user)
   end
 
   def show
@@ -19,7 +19,7 @@ class MissionsController < ApplicationController
     @mission.user_id = @user
     @mission.price = rand(87..2400)
     if @mission.save
-      redirect_to star_path(@star)
+      redirect_to mission_path(@mission)
     else
       render 'stars/show'
     end
@@ -32,13 +32,13 @@ class MissionsController < ApplicationController
   def update
     @mission = Mission.find(params[:id])
     @mission.update(mission_params)
-    redirect_to star_path(@mission.star)
+    redirect_to mission_path(@mission)
   end
 
   def destroy
     @mission = Mission.find(params[:id])
     @mission.destroy
-    redirect_to star_path(@mission.star)
+    redirect_to missions_path(@mission)
   end
 
   private
