@@ -1,0 +1,8 @@
+<h1><%= @mission.special_request %></h1>
+<p><%= @mission.price %></p>
+<%= link_to 'Back', star_path(@mission.star) %> |
+<%= link_to 'Edit', edit_mission_path %> |
+<li><%= link_to "Delete #{@mission.special_request}",
+            mission_path(@mission),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></li>

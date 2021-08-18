@@ -1,0 +1,6 @@
+<h1>Edit <%= @mission.special_request %></h1>
+<%= simple_form_for(@mission) do |f| %>
+  <%= f.input :price %>
+  <%= f.input :special_request %>
+  <%= f.submit %>
+<% end %>
