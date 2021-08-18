@@ -1,6 +1,15 @@
 <h1>Nos presques stars !</h1>
 <% @stars.each do |star| %>
-<ul>
-<li><%= link_to "#{star.performer_name}", "/stars/#{star.id}" %></li>
-</ul>
+  <ul>
+    <li><%= link_to "#{star.performer_name}", "/stars/#{star.id}" %>
+        <div>
+          <% if star.photo.present? %>
+            <%= cl_image_tag(star.photo.key,
+             :width => 200, :height => 250,
+             :crop => :thumb,
+             :gravity => :face) %>
+          <% end %>
+        </div>
+    </li>
+  </ul>
 <% end %>
