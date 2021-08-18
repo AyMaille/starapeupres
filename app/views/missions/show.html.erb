@@ -6,7 +6,7 @@
   <li><p><%= @mission.special_request %></p></li>
 
 </ul>
-<%= link_to 'Back', star_path(@mission.star) %> |
+<%= link_to 'Back', missions_path(@mission.star) %> |
 <%= link_to 'Edit', edit_mission_path %> |
 <li><%= link_to "Delete #{@mission.name}",
             mission_path(@mission),
