@@ -1,6 +1,6 @@
 class Star < ApplicationRecord
   belongs_to :user
-  has_many :missions
+  has_many :missions, dependent: :destroy
   has_one_attached :photo
 
   validates :first_name, :last_name, :address, :email_address, presence: true

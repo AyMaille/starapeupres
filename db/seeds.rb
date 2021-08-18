@@ -9,18 +9,20 @@ require 'faker'
 
 puts "destroying users"
 User.destroy_all
-puts "creating users"
+puts "destroying stars"
+Star.destroy_all
 
+ActiveRecord::Base.connection.reset_pk_sequence!('photos')
+
+puts "creating users"
 10.times do
   User.create(email: Faker::Internet.email,
               password: "secret")
 end
 puts "#{User.count} users created"
 
-puts "destroying stars"
-Star.destroy_all
-puts "creating stars"
 
+puts "creating stars"
 10.times do
   Star.create(performer_name: Faker::FunnyName.name,
               first_name: Faker::Name.first_name,
@@ -30,5 +32,7 @@ puts "creating stars"
               user: User.all.sample,
               category: %w[dancer singer showman].sample,
               decription: Faker::GreekPhilosophers.quote)
+              # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
+              # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
 end
-puts "#{Star.count} users created"
+puts "#{Star.count} stars created"
