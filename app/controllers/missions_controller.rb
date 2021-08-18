@@ -17,6 +17,7 @@ class MissionsController < ApplicationController
     @user = current_user.id
     @mission.star = @star
     @mission.user_id = @user
+    @mission.price = rand(87..2400)
     if @mission.save
       redirect_to star_path(@star)
     else
@@ -43,6 +44,6 @@ class MissionsController < ApplicationController
   private
 
   def mission_params
-    params.require(:mission).permit(:special_request, :price, :user_id, :star_id)
+    params.require(:mission).permit(:special_request, :price, :user_id, :star_id, :name, :address, :booking)
   end
 end
