@@ -1,17 +1,17 @@
 <h1>Nos presques stars !</h1>
-<div class="cards">
-<% @stars.each do |star| %>
-  <ul>
-    <li><%= link_to "#{star.performer_name}", "/stars/#{star.id}" %>
-        <div>
+<div class="index-cards">
+  <% @stars.each do |star| %>
+    <div class="index-card">
+        <h1><%= "#{star.performer_name}" %></h1>
+        <%= link_to "#{star.performer_name}", "/stars/#{star.id}" %>
+        <div class="pic">
           <% if star.photo.present? %>
             <%= cl_image_tag(star.photo.key,
-             :width => 200, :height => 250,
-             :crop => :thumb,
-             :gravity => :face) %>
+            :width => 200, :height => 250,
+            :crop => :thumb,
+            :gravity => :face) %>
           <% end %>
         </div>
-    </li>
-  </ul>
-<% end %>
+    </div>
+  <% end %>
 </div>

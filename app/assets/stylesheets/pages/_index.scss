@@ -1,11 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "starsindex";
 
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  padding-bottom: 30px;
-  margin-top: 100px;
-  list-style: none;
-}
+
+// .cards {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-gap: 16px;
+//   padding-bottom: 30px;
+//   margin-top: 100px;
+//   list-style: none;
+// }
