@@ -3,12 +3,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :stars, only: [:index, :show, :edit, :update, :new, :create] do
     resources :missions, only: [:create]
-  end# resources :users do
-  #   resources :stars
-  #   resources :missions
-  # end
+  end
   resources :missions, only: [:index, :show, :edit, :update, :destroy]
   namespace :contracts do
     resources :missions, only: [:index]
   end
+  get '/stars/show/:id', to: 'stars#show_star', as: 'show_star'
 end
