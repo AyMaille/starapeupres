@@ -9,10 +9,7 @@ class StarsController < ApplicationController
   end
 
   def show_star
-    # @star = Star.find(params[:id])
-    @star = Star.find_by(user_id: params[:id])
-    # raise
-    # @mission = Mission.new(star: @star)
+      @star = Star.find_by(user_id: params[:id])
   end
 
   def new
@@ -22,6 +19,9 @@ class StarsController < ApplicationController
   def create
     @star = Star.new(star_params)
     @star.user_id = current_user.id
+    # @star.current_user.performer = true
+    current_user.performer = true
+    current_user.save
     if @star.save
       redirect_to show_star_path(@star.user_id)
     else
@@ -33,6 +33,11 @@ class StarsController < ApplicationController
     @star = Star.find(params[:id])
     @star.destroy
     redirect_to stars_path
+  end
+
+  def exist?(id)
+    @star = Star.find_by(user_id: id)
+    return @star.nil? ? true : false
   end
 
   private
