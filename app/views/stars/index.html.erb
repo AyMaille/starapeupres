@@ -1,8 +1,11 @@
-<h1>Nos presques stars !</h1>
+<h1 id="titre-star-index">
+  Nos presques stars !
+</h1>
 <div class="index-cards">
   <% @stars.each do |star| %>
     <div class="index-card">
-        <h1><%= "#{star.performer_name}" %></h1>
+        <h1><strong><%= "#{star.performer_name}" %></strong></h1>
+        <h3><%= "#{star.category}" %></h3>
         <%= link_to "#{star.performer_name}", "/stars/#{star.id}" %>
         <div class="pic">
           <% if star.photo.present? %>
