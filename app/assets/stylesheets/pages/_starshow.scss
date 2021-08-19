@@ -1,0 +1,50 @@
+.card-show-star {
+  overflow: hidden;
+  height: 40vw;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.904);
+  box-shadow: 5px 5px 15px rgba(153, 153, 153, 0.281);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title {
+  font-size: 5em;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: goldenrod;
+}
+
+.pic-show-star {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.category-show-star {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2em;
+}
+
+.description-show-star {
+  position: absolute;
+  bottom: 430px;
+  right: 30px;
+  font-size: 1.5em;
+  width: 600px;
+}
+
+.booking {
+  width: 50%;
+  height: 100vw;
+  margin-top: 100px;
+  color: white;
+}
