@@ -19,6 +19,7 @@ class StarsController < ApplicationController
   def create
     @star = Star.new(star_params)
     @star.user_id = current_user.id
+    @star.email_address = current_user.email
     # @star.current_user.performer = true
     current_user.performer = true
     current_user.save
@@ -29,15 +30,31 @@ class StarsController < ApplicationController
     end
   end
 
-  def destroy
-    @star = Star.find(params[:id])
-    @star.destroy
-    redirect_to stars_path
+  def edit
+    @star = Star.find_by(user_id: params[:id])
   end
 
-  def exist?(id)
-    @star = Star.find_by(user_id: id)
-    return @star.nil? ? true : false
+  def update
+    @star = Star.find_by(user_id: params[:id])
+    @star.update(star_params)
+    redirect_to show_star_path(@star.user_id)
+  end
+
+  def destroy
+    @star = Star.find_by(user_id: params[:id])
+    current_user.performer = false
+    current_user.save
+    @star.destroy
+    redirect_to root_path
+  end
+
+  def performer
+    if current_user.performer?
+      current_user.update(performer: false)
+    else
+      current_user.update(performer: true)
+    end
+    redirect_to root_path
   end
 
   private
