@@ -44,7 +44,7 @@ cloclo = Star.create(performer_name: "Cloclo",
             address: "10 rue Alexandrie",
             email_address: "clocloforever@gmail.com",
             user: User.all.sample,
-            category: "singer",
+            category: "Chanson",
             decription: "les sirènes du port d'Alexandrie chantent ma mélooodie")
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
@@ -56,7 +56,7 @@ cocluche = Star.create(performer_name: "Cocluche",
             address: "Rue du mec",
             email_address: "coluche.president@gmail.com",
             user: User.all.sample,
-            category: "showman",
+            category: "Humour",
             decription: "Je suis la cocluche de vos soirées d'anniversaires. Les enfants m'adorent")
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
@@ -68,7 +68,7 @@ ed = Star.create(performer_name: "Ed che ran",
             address: "48 cours des anges",
             email_address: "edche@gmail.com",
             user: User.all.sample,
-            category: "singer",
+            category: "Chanson",
             decription: "10/10 the Rolling Stones magazine")
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
@@ -80,7 +80,7 @@ georges = Star.create(performer_name: "Georges cloné",
             address: "Faker::Address.street_address",
             email_address: "whatelse@gmail.com",
             user: User.all.sample,
-            category: "showman",
+            category: "Humour",
             decription: "dispo même pour un café")
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
@@ -92,7 +92,7 @@ jojo = Star.create(performer_name: "Johnny",
             address: "11 rue Marie",
             email_address: "johnnyHubert@gmail.com",
             user: User.all.sample,
-            category: "singer",
+            category: "Chanson",
             decription: "Vous m'aimerez comme que je t'aime")
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
@@ -104,7 +104,7 @@ julien = Star.create(performer_name: "Julien Vapercé",
             address: Faker::Address.street_address,
             email_address: Faker::Internet.email,
             user: User.all.sample,
-            category: "showman",
+            category: "Humour",
             decription: "Quizz organisés, Blindtest ou chauffeur de salle")
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
@@ -116,7 +116,7 @@ menon = Star.create(performer_name: "Nenel Meoui",
             address: Faker::Address.street_address,
             email_address: Faker::Internet.email,
             user: User.all.sample,
-            category: "showman",
+            category: "Sport",
             decription: "Multiple ballon d'or des anniversaires d'enfants")
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
@@ -128,7 +128,7 @@ mylene = Star.create(performer_name: "Mylenial",
             address: Faker::Address.street_address,
             email_address: Faker::Internet.email,
             user: User.all.sample,
-            category: "singer",
+            category: "Chanson",
             decription: Faker::GreekPhilosophers.quote)
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
@@ -140,7 +140,7 @@ depp = Star.create(performer_name: "johny sauvage",
             address: Faker::Address.street_address,
             email_address: Faker::Internet.email,
             user: User.all.sample,
-            category: "showman",
+            category: "Humour",
             decription: "concert et fete de village, sur Le Tourne en ce moment")
             # photo: Cloudinary::CarrierWave::StoredFile.new(original_model.image_cloudinary.identifier))
             # photo: attach(io: File.open('../assets/images/photos_sample/cloco.png'), filename: 'cloco.png', content_type: 'image/png'))
