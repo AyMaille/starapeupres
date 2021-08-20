@@ -1,7 +1,11 @@
 class MissionsController < ApplicationController
 
   def index
-    @missions = Mission.where(user: current_user)
+    if current_user.performer == true
+      @missions = Mission.where(star_id: Star.find_by(user_id: current_user.id))
+    else
+      @missions = Mission.where(user_id: current_user.id)
+    end
   end
 
   def show

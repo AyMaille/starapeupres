@@ -27,16 +27,49 @@
   left: 15px;
 }
 
+.fname-show-star {
+  position: absolute;
+  top: 90px;
+  right: 30px;
+  font-size: 1.5em;
+  width: 600px;
+}
+
+.lname-show-star {
+  position: absolute;
+  top: 170px;
+  right: 30px;
+  font-size: 1.5em;
+  width: 600px;
+}
+
+.address-show-star {
+  position: absolute;
+  top: 270px;
+  right: 30px;
+  font-size: 1.5em;
+  width: 600px;
+}
+
+.email-show-star {
+  position: absolute;
+  top: 370px;
+  right: 30px;
+  font-size: 1.5em;
+  width: 600px;
+}
+
 .category-show-star {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 2em;
+  top: 470px;
+  right: 30px;
+  font-size: 1.5em;
+  width: 600px;
 }
 
 .description-show-star {
   position: absolute;
-  bottom: 430px;
+  top: 570px;
   right: 30px;
   font-size: 1.5em;
   width: 600px;
