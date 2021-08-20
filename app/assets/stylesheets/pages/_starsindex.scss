@@ -1,39 +1,55 @@
+#titre-star-index{
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  color: goldenrod;
+}
+
 .index-card {
   overflow: hidden;
   height: 200px;
   background: rgba(255, 255, 255, 0.904);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: space-around;
   box-shadow: 3px 3px 5px black ;
   margin-right: 20px;
   margin-left: 20px;
+  border-radius: 5px;
   padding: 5px;
   position: relative;
-  // :hover{
-  //   background: rgb(255, 255, 255);
-  // }
+  :hover{
+    background: rgba(255, 255, 255, 1);
+    z-index: 1;
+  }
   .pic {
     border-radius: 5px;
     position: absolute;
     right: 50px;
+    z-index: 2;
   }
   h1 {
     position: absolute;
-    top: 80px;
-    left: 50px;
+    top: 20px;
+    left: 20px;
+    width: 250px;
+    z-index: 2;
+  }
+  h3 {
+     position: absolute;
+    bottom: 20px;
+    left: 40px;
+    z-index: 2;
   }
   a {
     color: transparent;
-    text-decoration: none;
     font-size: 25px;
     position: absolute;
     height: 100%;
     width: 100%;
     top: 0px;
     left: 0px;
-    z-index: 1;
+    z-index: 5;
   }
 }
 
@@ -42,6 +58,5 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   padding-bottom: 30px;
-  margin-top: 100px;
-  list-style: none;
+  margin-top: 50px;
 }
