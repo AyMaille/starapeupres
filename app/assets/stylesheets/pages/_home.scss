@@ -13,7 +13,7 @@
     width: 65vw;
     margin: 0 auto;
     h1 {
-      color:#951305;
+      color:white;
       text-align: center;
       font-size: 50px;
       margin-top: 300px;
@@ -32,17 +32,16 @@ body {
 
 .btn-join {
   padding: 10px;
-  background-color: #951305;
+  background-color: whitesmoke;
   border-radius: 4%;
   text-align: center;
   text-decoration: none;
-  border-color: white;
+  border-color: whitesmoke;
   color:#000000;
 }
 
 .btn-join:hover {
-  background-color: #E1E5E8;
-  border-color: #951305;
+  background-color: #efebd7;
   text-decoration: none;
   color:#000000;
 }
