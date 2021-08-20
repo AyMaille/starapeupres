@@ -1,6 +1,21 @@
-
-<ul class="list-group">
-  <% @missions.each do |mission| %>
-    <li class="list-group-item"><%= link_to mission.name, mission_path(mission) %></li>
-  <% end %>
-</ul>
+<div class="card-container">
+  <h1>Mes réservations</h1>
+     <section class="cards">
+      <% @missions.each do |mission| %>
+          <a href="<%= mission_path(mission) %>" class="card">
+            <div class="card__overlay">
+              <span>Plus d'informations</span>
+            </div>
+            <div class="card__image" style="background-image:url(https://www.fillmurray.com/640/360)"></div>
+            <div class="card__content">
+              <div class="card__title"><%= mission.name%></div>
+              <div class="card__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat amet unde, quo corrupti vitae esse quam fugit optio nobis quae necessitatibus, neque, consectetur quia doloribus assumenda aperiam. Maxime, recusandae quas?
+              </div>
+            </div>
+            <div class="card__date"><%= mission.booking %></div>
+            <div class="card__price"><%= mission.price %> €</div>
+          </a>
+       <% end %>
+      </section>
+</div>
