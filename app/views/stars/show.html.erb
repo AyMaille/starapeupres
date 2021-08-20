@@ -19,8 +19,8 @@
   </div>
     <span class="text-white">--</span>
     <span id="booking-anchor"></span>
-  <div class="booking">
-    <h3>Book</h3>
+  <div class="booking text-warning">
+    <h3>Réserver</h3>
     <%= simple_form_for [@star, @user, @mission] do |f| %>
       <%= f.input :booking, placeholder: 'Date' , label: "Date", as: :date, html5: true %>
       <%= f.input :name, placeholder: "Nom de l'évenement" , label: "Nom de l'évenement" %>
