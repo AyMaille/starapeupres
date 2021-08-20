@@ -1,3 +1,6 @@
+<%
+=begin %>
+
 <h1 id="titre-star-index">
   Nos presques stars !
 </h1>
@@ -17,4 +20,33 @@
         </div>
     </div>
   <% end %>
+</div>
+<%
+=end %>
+
+
+  <h1 class="mt-4 ml-4">Nos presques stars</h1>
+<div class="super-container-show">
+     <section class="cards">
+       <% @stars.each do |star| %>
+          <a href="<%= star_path(star) %>" class="card">
+              <% if star.photo.attached? %>
+                <div class="card__image" style="background-image: url('<%= cl_image_path(star.photo.key,
+                width: 200, :height => 250,
+                crop: :thumb,
+                gravity: :face) %>')">
+               </div>
+              <% else %>
+                <div class="card__image" style="background-image: url(https://www.fillmurray.com/640/360)">
+                </div>
+              <% end %>
+            <div class="card__content">
+              <div class="card__title"><%= star.performer_name%></div>
+              <div class="card__description">
+                 <%= star.category %>
+              </div>
+            </div>
+          </a>
+       <% end %>
+      </section>
 </div>

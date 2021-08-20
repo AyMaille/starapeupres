@@ -81,3 +81,20 @@
   margin-top: 100px;
   color: white;
 }
+
+.show-to-anchor-btn {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 50px;
+  right: 80px;
+}
+
+.show-to-anchor-btn:hover {
+    opacity: 1;
+  }
