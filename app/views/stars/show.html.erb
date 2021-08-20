@@ -13,7 +13,12 @@
     <div class="description-show-star">
       <%= "#{@star.decription}" %>
     </div>
+    <div class="show-to-anchor-btn">
+      <a href="#booking-anchor">Réservez-moi</a>
+    </div>
   </div>
+    <span class="text-white">--</span>
+    <span id="booking-anchor"></span>
   <div class="booking">
     <h3>Book</h3>
     <%= simple_form_for [@star, @user, @mission] do |f| %>
