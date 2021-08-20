@@ -1,16 +1,17 @@
 <div class="card-container">
-  <h1>Mes réservations</h1>
+  <h1 class="mt-4 ml-4">Mes réservations</h1>
      <section class="cards">
       <% @missions.each do |mission| %>
           <a href="<%= mission_path(mission) %>" class="card">
             <div class="card__overlay">
               <span>Plus d'informations</span>
             </div>
-            <div class="card__image" style="background-image:url(https://www.fillmurray.com/640/360)"></div>
+            <div class="card__image" style="background-image:url(https://res.cloudinary.com/pierrelnl/image/upload/v1629467467/0772723_zpnxxm.png
+)"></div>
             <div class="card__content">
               <div class="card__title"><%= mission.name%></div>
               <div class="card__description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat amet unde, quo corrupti vitae esse quam fugit optio nobis quae necessitatibus, neque, consectetur quia doloribus assumenda aperiam. Maxime, recusandae quas?
+                ⭐️ Votre réservation arrive très bientôt ! N'hésitez pas à découvrir toutes nos autres stars d'ici là ! ⭐️
               </div>
             </div>
             <div class="card__date"><%= mission.booking %></div>
