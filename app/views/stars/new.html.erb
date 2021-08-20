@@ -1,13 +1,15 @@
-<div class="text-warning">
-  <%= simple_form_for(@star) do |f| %>
-    <%= f.input :first_name, :label => "Prénom" %>
-    <%= f.input :last_name, :label => "Nom" %>
-    <%= f.input :address, :label => "Adresse" %>
-    <%= f.input :email_address,:label => "Email" %>
-    <%= f.input :performer_name, :label => "Nom de scène" %>
-    <%= f.input :category, :label => "Catégorie" %>
-    <%= f.input :decription, :label => "Description" %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit 'Créer', class: "p-2 pr-3 pl-3" %>
-<% end %>
+<div class="container w-50">
+  <div class="text-warning">
+    <%= simple_form_for(@star) do |f| %>
+      <%= f.input :first_name, :label => "Prénom" %>
+      <%= f.input :last_name, :label => "Nom" %>
+      <%= f.input :address, :label => "Adresse" %>
+      <%= f.input :email_address,:label => "Email" %>
+      <%= f.input :performer_name, :label => "Nom de scène" %>
+      <%= f.input :category, :label => "Catégorie" %>
+      <%= f.input :decription, :label => "Description" %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit 'Créer', class: "p-2 pr-3 pl-3" %>
+  <% end %>
+  </div>
 </div>
